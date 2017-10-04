@@ -62,16 +62,10 @@ show_array ($arrNum);
 <?php
 function speed ($S, $t)
 {
-	$v = 0;
-	$v = $S / $t;
+	$v= 0;
+	$v= $S / $t;
+	return $v;
 }
-
-if (isset($_POST['distance']) && isset($_POST['time'])) {
-	echo speed ($_POST['distance'], $_POST['time']), "Скорость в км/ч <br>";
-	echo speed ($_POST['distance'], $_POST['time']), "Скорость в м/c <br>";
-}
-
-//echo speed(100, 2);
 ?>
 <form action="index.php" method="post">
 	<label>Введите расстояние</label>
@@ -83,7 +77,41 @@ if (isset($_POST['distance']) && isset($_POST['time'])) {
     <input type="submit" value="Показать" />
     <br />
 </form>
+<p><?php
+if (isset($_POST['time'])) {
+	if ($_POST['time'] == 0) 
+	echo "Введено не правильное значение";
+	else{
+	echo "Скорость в км/ч => ",speed ($_POST['distance'], $_POST['time']), "<br>";
+	echo "Скорость в м/c =>", round(speed ($_POST['distance'], $_POST['time']) * 0.2778, 1), "<br>";}
+}
+?></p>
 
-
+<p><strong>Задание 3</strong> </p>
+<?php
+function fackt ($n){
+$f = 1;
+	for ($i=1; $i <= $n; $i++) { 
+		$f *= $i;
+	}
+	return $f;
+}
+?>
+<form action="index.php" method="post">
+	<label>Введите число</label>
+    <input type="text" name="integer" />
+    <br />
+    <input type="submit" value="Показать !n" />
+    <br />
+</form>
+<p><?php
+if (isset($_POST['integer'])) {
+	if ($_POST['integer'] == 0) 
+	echo "!n = 1";
+	else
+	echo "!n = ", fackt($_POST['integer']), "<br>";
+	
+}
+?></p>
 </body>
 </html>
