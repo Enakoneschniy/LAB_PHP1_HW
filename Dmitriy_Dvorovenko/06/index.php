@@ -113,5 +113,7 @@ if (isset($_POST['integer'])) {
 	
 }
 ?></p>
+
+
 </body>
 </html>
