@@ -15,11 +15,12 @@ echo '<table cellpadding="4" cellspacing="0">'; // выводим теги дл�
 	foreach ($arr as $key => $value) { // собственно вывод массива в виде таблицы
 	echo "<tr>";
 		foreach ($value as $data)
-		    echo "<td>".$data."</td>";
+		    echo "<td>".$data,"</td>";
 		echo "</tr>";
 		}
+return $data;
 echo "</table>";
-return $arr;
+
 
 }
 

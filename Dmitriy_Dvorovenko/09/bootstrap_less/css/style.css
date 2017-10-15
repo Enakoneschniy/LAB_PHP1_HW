@@ -1,0 +1,22 @@
+
+.card-text.price{
+    font-size: 1.7em;
+}
+.card:hover{
+    border-color: #343a40!important;
+    background-color: #343a40!important;
+    color: #fff!important;
+}
+
+.glyph-icon svg {
+    width:16px;
+    height:16px;
+}
+
+.icon{
+    color: white;
+}
+.prod_img{
+    width: 350px;
+    height: 350px;
+}
